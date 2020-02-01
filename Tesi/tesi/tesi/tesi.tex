@@ -1,0 +1,228 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Final dissertation of Ph.D. course
+%
+% Template of the Manuscript
+%
+% Graduate School and Research Council
+%
+% Department of Engineering
+%
+% University of Sannio, Benevento
+%
+% July, 15 2009 - ver. 5.0
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,twoside]{book}
+
+% The following packages can be found on http:\\www.ctan.org
+
+\usepackage{fancyhdr}                   % to customize headers and footers
+%\usepackage{cite}                       % to make a chain of citations more compact
+\usepackage[scriptsize]{caption2}       % to customize captions in figure and table environments
+\usepackage{epsfig}                     % to include postscript graphics files
+\usepackage{graphicx}                   % to include pdf, bitmapped graphics files
+\usepackage{color,colortbl}                      % to include pdf, bitmapped graphics files
+%\usepackage{dsfont}                     % assumes dsfont package installed (required to call \mathds)
+\usepackage{amsmath}                    % to insert mathematical formulas
+\usepackage{amssymb}                    % to insert mathematical formulas and special characters
+\usepackage{slashbox}                   % slashbox for tables with diagonal lines
+\usepackage{vmargin}
+\usepackage{xspace}
+\usepackage[hyphens]{url}
+\usepackage{multirow}
+\usepackage{paralist, tabularx}
+\usepackage{framed}
+\usepackage{subfigure}
+\usepackage{pifont}
+
+\usepackage{rotating}
+\usepackage{xcolor}
+\usepackage{hhline}
+\usepackage{booktabs} 
+\usepackage{balance}
+\usepackage{fancybox}
+\usepackage{tcolorbox}
+\usepackage{ltxtable}
+\usepackage{lmodern}
+\usepackage{scrextend}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{comment}
+%\usepackage[utf8]{inputenc}
+
+\changefontsizes[10pt]{9pt}
+
+
+\special{papersize=160mm,240mm}
+\setpapersize{custom}{160mm}{240mm}
+
+%\setmargins{leftmargin}{topmargin}{textwidth}{textheight}%
+%{headheight}{headsep}{footheight}{footskip}
+
+\setmargins{1.2cm}{1.5cm}{13cm}{18.5cm}%
+           {0.6cm}{0.8cm}{0cm}{1.0cm}
+
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define margins and spaces for headers, footers and body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ie}{\textit{i.e.,}\xspace}
+\newcommand{\eg}{\textit{e.g.,}\xspace}
+\newcommand{\etc}{\textit{etc.}\xspace}
+\newcommand{\etal}{\textit{et al.}\xspace}
+\newcommand{\tabref}[1]{Table~\ref{#1}\xspace}
+\newcommand{\secref}[1]{Section~\ref{#1}\xspace}
+\newcommand{\chapref}[1]{Chapter~\ref{#1}\xspace}
+\newcommand{\appref}[1]{Appendix~\ref{#1}\xspace}
+\newcommand{\figref}[1]{Figure~\ref{#1}\xspace}
+
+\definecolor{red}{rgb}{1,0.5,0.5}
+\definecolor{grey}{rgb}{0.9,0.9,0.9}
+
+\definecolor{lightgray}{HTML}{D3D3D3}
+\definecolor{lightcoral}{HTML}{F08080}
+\definecolor{lightgreen}{HTML}{90EE90}
+\definecolor{lightyellow}{HTML}{EEE8AA}
+
+\newtcolorbox{resultbox}{colback=white, arc=0.5mm, top=1mm, bottom=1mm, left=1mm, right=1mm}
+
+\linespread{1.2}
+\renewcommand{\captionfont}{\normalfont \footnotesize}
+\renewcommand{\bibname}{References}
+
+\newcommand*{\smallimg}[1]{%
+	\parbox[c]{1em}{\includegraphics[height=7mm,width=7cm]{#1}}
+}
+
+\newcommand*{\mtext}[2]{%
+	\multirow{#1}{*}{\parbox{3.5cm}{\raggedright{#2}}}
+}
+
+\hyphenation{Replication-SA-TD-Removal SA-TD}
+
+\newcommand{\rqfirstone}{What are the general development practices within the Continuous Delivery pipeline?}
+\newcommand{\rqfirsttwo}{What are the practices adopted to manage technical debt?}
+\newcommand{\rqfirstthree}{what are the testing practices adopted within the Continuous Delivery pipeline?}
+\newcommand{\rqfirstfour}{How is Continuous Delivery performed?}
+
+\newcommand{\rqsecondone}{What types of failures affect builds of OSS and {\sc ING NL} projects?}
+\newcommand{\rqsecondsecond}{How frequent are the different types of build failures in the observed OSS and {\sc ING NL} projects?}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define a new style for headers, footers and body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{dissertation}{
+    \fancyhf{}                              % clear previous settings
+    %\fancyfoot[RO,LE]{\thepage}            % insert no. of page (right footer for odd pages, left footer for even pages)
+    \fancyfoot[C]{\thepage}
+    \fancyhead[LE]{\slshape \leftmark}      % insert info on the left header (title of the chapter) of even pages
+    \fancyhead[RO]{\slshape \rightmark}     % insert info on the right header (title of the paragraph) of odd pages
+    \renewcommand{\headrulewidth}{0.3pt}    % insert a line between body and header
+    \renewcommand{\footrulewidth}{0.0pt}    % no line between body and footer
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert first page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{firstpage}
+\thispagestyle{empty}
+\normalfont
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert dedication to someone
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{dedication}
+%\include{ack}
+%\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert acknowledgments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert translation of the resume in the official language of the
+% home institution (Italian)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\include{sommario}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert resume of the dissertation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{resume}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert preface and acknowledgments section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{dissertation}
+%\include{preface}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert table of contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\newpage
+\pagestyle{empty} $\:$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert the body of the dissertation
+% use the style "dissertation" defined in the template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{dissertation}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% include chapters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+\include{chapter8}
+\include{chapter9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% include References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert list of figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{List of figures}
+\listoffigures
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% insert list of tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{empty} $\:$
+\newpage
+\pagestyle{dissertation}
+
+\addcontentsline{toc}{chapter}{List of tables} \listoftables
+
+\end{document}
+%
+% End template %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
