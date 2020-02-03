@@ -18,7 +18,7 @@ Document=tesi.tex
 
 [Frame0_View0,0]
 TopLine=45
-Cursor=1781
+Cursor=1761
 
 [Frame1]
 Flags=0
@@ -35,8 +35,8 @@ Class=BibTeXView
 Document=bibliography.bib
 
 [Frame1_View0,0]
-TopLine=17
-Cursor=1595
+TopLine=16
+Cursor=1572
 
 [Frame2]
 Flags=0
@@ -71,12 +71,12 @@ Class=LaTeXView
 Document=chapter1.tex
 
 [Frame3_View0,0]
-TopLine=13
-Cursor=1895
+TopLine=0
+Cursor=466
 
 [SessionInfo]
 FrameCount=4
-ActiveFrame=3
+ActiveFrame=2
 
 [Bookmarks]
 chapter1.tex=34 
