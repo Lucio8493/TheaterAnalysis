@@ -1,6 +1,0 @@
-\babel@toc {italian}{}
-\babel@toc {italian}{}
-\contentsline {chapter}{\numberline {1}Capitolo 1}{5}%
-\contentsline {chapter}{References}{6}%
-\contentsline {chapter}{List of figures}{7}%
-\contentsline {chapter}{List of tables}{11}%
